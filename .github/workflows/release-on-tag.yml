@@ -41,7 +41,7 @@ jobs:
           overwrite: true
           file_glob: true
   docker:
-    needs: semantic-release
+    needs: get-Tag
     # Only build/push new docker images when there is new version released
     if: needs.semantic-release.outputs.new-release-published == 'true'
     runs-on: ubuntu-latest
